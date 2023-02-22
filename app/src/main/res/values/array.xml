@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="job_array">
+        <item>@string/str_doctor</item>
+        <item>@string/str_nurse</item>
+        <item>@string/str_teatcher</item>
+        <item>@string/str_comunicator</item>
+        <item>@string/str_other1</item>
+    </string-array>
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:card_view="http://schemas.android.com/apk/res-auto"
+	tools:context="com.iot.volunteer.activity.ActivityLogin">
+
+	<!-- Background -->
+	<ImageView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/white"/>
+
+	<!-- Content -->
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:paddingLeft="@dimen/dim_gap_4"
+			android:paddingRight="@dimen/dim_gap_4">
+
+			<!-- Mark -->
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="3">
+				<androidx.cardview.widget.CardView
+					android:id="@+id/ID_CV_IMAGE_MARK"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					card_view:cardCornerRadius="@dimen/dim_round_small_icon_radius"
+					card_view:cardPreventCornerOverlap="false">
+
+					<ImageView
+						android:id="@+id/ivLogo"
+						android:layout_width="@dimen/dim_logo_size"
+						android:layout_height="@dimen/dim_logo_size"
+						android:background="@color/color_tab_selected"
+						android:scaleType="centerCrop"
+						android:src="@drawable/login_back"/>
+				</androidx.cardview.widget.CardView>
+				<TextView
+					android:id="@+id/ivTitle"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/dim_gap_3"
+					android:layout_below="@+id/ID_CV_IMAGE_MARK"
+					android:gravity="center"
+					android:text="@string/str_logo_title"
+					android:textSize="@dimen/dim_font_3"
+					android:textColor="@android:color/black"/>
+			</RelativeLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="4"
+				android:layout_marginLeft="@dimen/dim_gap_6"
+				android:layout_marginRight="@dimen/dim_gap_6"
+				android:orientation="vertical">
+				<!-- Phone Number -->
+				<EditText
+					android:id="@+id/edtPhone"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="@dimen/dim_gap_2"
+					android:background="@drawable/edt_bg_selector"
+					android:maxLength="11"
+					android:inputType="number"
+					android:singleLine="true"
+					android:hint="@string/str_phone_number_hint"/>
+
+				<!-- Required for Phone Number -->
+				<TextView
+					android:id="@+id/tvRequirePhone"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="right"
+					android:paddingRight="@dimen/dim_gap_1"
+					android:paddingBottom="@dimen/dim_gap_2"
+					android:textColor="@android:color/holo_red_dark"
+					android:text="@string/str_required"/>
+
+				<!-- Password -->
+				<EditText
+					android:id="@+id/edtPwd"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="@dimen/dim_gap_2"
+					android:background="@drawable/edt_bg_selector"
+					android:maxLength="20"
+					android:inputType="textPassword"
+					android:singleLine="true"
+					android:hint="@string/str_password_hint"/>
+
+				<!-- Required for Password -->
+				<TextView
+					android:id="@+id/tvRequiredPwd"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="right"
+					android:paddingRight="@dimen/dim_gap_1"
+					android:paddingBottom="@dimen/dim_gap_2"
+					android:textColor="@android:color/holo_red_dark"
+					android:text="@string/str_required"/>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/dim_gap_1"
+					android:layout_marginBottom="@dimen/dim_gap_5">
+					<CheckBox
+						android:id="@+id/cbSaveUser"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="@dimen/dim_gap_2"
+						android:textSize="@dimen/dim_font_2"
+						android:text="@string/str_save_user"/>
+					<CheckBox
+						android:id="@+id/cbSavePwd"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentRight="true"
+						android:textSize="@dimen/dim_font_2"
+						android:layout_marginRight="@dimen/dim_gap_2"
+						android:text="@string/str_save_password"/>
+				</RelativeLayout>
+				<!-- Login -->
+				<Button
+					android:id="@+id/btnLogin"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="@dimen/dim_gap_1"
+					android:textAllCaps="false"
+					android:background="@drawable/selector_button_fill"
+					android:enabled="false"
+					android:stateListAnimator="@null"
+					android:textColor="@color/button_color"
+					android:text="@string/str_login"/>
+
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="@dimen/dim_gap_7">
+
+					<!-- Register -->
+					<TextView
+						android:id="@+id/tvRegister"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentLeft="true"
+						android:padding="@dimen/dim_gap_1"
+						android:textSize="@dimen/dim_font_2"
+						android:textColor="@color/color_text_blue"
+						android:text="@string/str_register"/>
+
+					<!-- Forgot Password -->
+					<TextView
+						android:id="@+id/tvForgot"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_alignParentRight="true"
+						android:padding="@dimen/dim_gap_1"
+						android:textSize="@dimen/dim_font_2"
+						android:textColor="@color/color_text_blue"
+						android:text="@string/str_forgot_password"/>
+
+				</RelativeLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+</RelativeLayout>

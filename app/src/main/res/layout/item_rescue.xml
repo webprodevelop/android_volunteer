@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/llRoot"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="@dimen/dim_gap_2"
+	android:orientation="horizontal">
+
+	<TextView
+		android:id="@+id/tvVictim"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textSize="@dimen/dim_font_2"
+		android:textColor="@color/color_text_list_item"
+		android:text="@string/str_aid_man"/>
+
+	<TextView
+		android:id="@+id/tvRescueTime"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textSize="@dimen/dim_font_12"
+		android:textColor="@color/color_text_list_item"
+		android:text="@string/str_aid_time"/>
+
+	<TextView
+		android:id="@+id/tvStatus"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textSize="@dimen/dim_font_2"
+		android:textColor="@color/color_text_list_item"
+		android:text="@string/str_state"/>
+
+	<TextView
+		android:id="@+id/tvIntegral"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:gravity="center"
+		android:textSize="@dimen/dim_font_2"
+		android:textColor="@color/color_text_list_item"
+		android:text="@string/str_point"/>
+</LinearLayout>
